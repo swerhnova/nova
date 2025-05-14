@@ -52,7 +52,7 @@ main {
   display: block;
   margin: 1rem 0;
   font-weight: bold;
-  color: rgb(80, 240, 11);
+  color: rgb(255, 255, 255);
 }
 
 button {
@@ -190,7 +190,7 @@ footer {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
   z-index: 2; /* Makes sure the product info is always on top of the images */
 }
 
@@ -223,9 +223,9 @@ footer {
 }
 
 .product-info button:hover {
-  background-color: #fe0000;
+  background-color: #920000;
 }
 
 .product-card:hover .product-info {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
 }
