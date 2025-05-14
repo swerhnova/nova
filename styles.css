@@ -145,7 +145,7 @@ footer {
 
 .product-card {
   display: inline-block;
-  width: 200px;
+  width: 300px;
   height: 350px;
   margin: 10px;
   border: 1px solid #ddd;
@@ -210,7 +210,7 @@ footer {
 }
 
 .product-info button {
-  background-color: #ff0000;
+  background-color: #ffffff;
   color: rgb(45, 45, 45);
   border: none;
   padding: 10px 15px;
@@ -221,7 +221,7 @@ footer {
 }
 
 .product-info button:hover {
-  background-color: #0056b3;
+  background-color: #fe0000;
 }
 
 .product-card:hover .product-info {
