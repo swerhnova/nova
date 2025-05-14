@@ -190,7 +190,7 @@ footer {
   position: absolute;
   bottom: 10px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #353535eb;
   z-index: 2; /* Makes sure the product info is always on top of the images */
 }
 
@@ -213,7 +213,7 @@ footer {
 
 .product-info button {
   background-color: #ffffff;
-  color: rgb(45, 45, 45);
+  color: #353535;
   border: none;
   padding: 10px 15px;
   font-size: 14px;
