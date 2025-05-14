@@ -143,33 +143,32 @@ footer {
   color: #ee0000;
 }
 
-.product-image {
+.product-card {
   position: relative;
-  width: 100%;
-  overflow: hidden;
+  display: inline-block;
+  width: 200px;
+  height: 300px;
 }
 
-.product-image img {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
-  transition: opacity 0.3s ease;
-}
-
-/* Скрыть вторую картинку по умолчанию */
-.product-image .hover-img {
+.product-card .product-image,
+.product-card .hover-image {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-/* Показываем вторую при наведении */
-.product-image:hover .hover-img {
+.product-card .hover-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .hover-image {
   opacity: 1;
 }
 
-/* Прячем первую при наведении */
-.product-image:hover img:first-child {
+.product-card:hover .product-image {
   opacity: 0;
 }
