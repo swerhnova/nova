@@ -173,3 +173,32 @@ footer {
 .product-image:hover img:first-child {
   opacity: 0;
 }
+.product-card {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 300px;
+}
+
+.product-card .product-image,
+.product-card .hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card .hover-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .hover-image {
+  opacity: 1;
+}
+
+.product-card:hover .product-image {
+  opacity: 0;
+}
