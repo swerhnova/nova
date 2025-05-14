@@ -173,6 +173,7 @@ footer {
 
 .hover-image {
   opacity: 0;
+  z-index: 1; /* Ensures that the hover image is on top */
 }
 
 .product-card:hover .hover-image {
@@ -190,6 +191,7 @@ footer {
   bottom: 10px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8);
+  z-index: 2; /* Makes sure the product info is always on top of the images */
 }
 
 .product-info h2 {
