@@ -87,7 +87,7 @@ footer {
 
 .cart-modal {
   position: fixed;
-  top: 80px;
+  top: 100px;
   right: 20px;
   background: #000000;
   color: #fff;
@@ -132,7 +132,7 @@ footer {
 }
 
 .navbar li a {
-  color: white;
+  color: rgb(252, 252, 252);
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
@@ -140,7 +140,7 @@ footer {
 }
 
 .navbar li a:hover {
-  color: #ee0000;
+  color: #ffffff;
 }
 
 .product-card {
@@ -227,5 +227,5 @@ footer {
 }
 
 .product-card:hover .product-info {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: #353535;
 }
