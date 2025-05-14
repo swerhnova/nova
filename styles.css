@@ -210,8 +210,8 @@ footer {
 }
 
 .product-info button {
-  background-color: #007bff;
-  color: white;
+  background-color: #ff0000;
+  color: rgb(45, 45, 45);
   border: none;
   padding: 10px 15px;
   font-size: 14px;
