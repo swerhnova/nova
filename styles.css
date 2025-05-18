@@ -213,7 +213,7 @@ footer {
 
 .product-info button {
   background-color: #ffffff;
-  color: #444444;
+  color: #000000;
   border: none;
   padding: 10px 15px;
   font-size: 14px;
@@ -223,9 +223,6 @@ footer {
 }
 
 .product-info button:hover {
-  background-color: #920000;
+  background-color: #b4b4b4;
 }
 
-.product-card:hover .product-info {
-  background-color:  #1f1f1f;
-}
