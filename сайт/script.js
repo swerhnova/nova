@@ -20,7 +20,7 @@ function updateCartUI() {
     total += item.price;
   });
 
-  cartTotal.textContent = `€${total}`;
+  cartTotal.textContent = `₽${total}`;
 }
 
 function toggleCart() {
