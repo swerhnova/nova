@@ -29,7 +29,7 @@ main {
 }
 
 .product-card {
-  background: #1d1d1d;
+  background: #000000;
   border: 1px solid #000000;
   padding: 1rem;
   border-radius: 8px;
@@ -224,5 +224,20 @@ footer {
 
 .product-info button:hover {
   background-color: #b4b4b4;
+}
+
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* отступы между плитками */
+  justify-content: center; /* можно заменить на start или space-between */
+}
+
+.product-grid .product-card {
+  width: 200px; /* задай нужную ширину карточки */
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
