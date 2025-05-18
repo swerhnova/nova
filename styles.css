@@ -241,3 +241,42 @@ footer {
   box-sizing: border-box;
 }
 
+
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    padding: 0;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+
+  .product-card {
+    width: 100% !important;
+  }
+
+  .cart-icon {
+    position: static;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
+}
