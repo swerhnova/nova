@@ -58,8 +58,8 @@ main {
 button {
   padding: 0.5rem 1rem;
   border: none;
-  background: #fff;
-  color: #ff1111;
+  background: #818181;
+  color: #ffffff;
   cursor: pointer;
   border-radius: 4px;
   transition: background 0.2s;
