@@ -188,9 +188,9 @@ footer {
   padding: 10px;
   text-align: center;
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
   width: 100%;
-  background-color: #353535eb;
+  background-color: #000000;
   z-index: 2; /* Makes sure the product info is always on top of the images */
 }
 
