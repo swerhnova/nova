@@ -148,7 +148,7 @@ footer {
   width: 210px;
   height: 355px;
   margin: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #ff0000;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
@@ -213,7 +213,7 @@ footer {
 
 .product-info button {
   background-color: #ffffff;
-  color: #000000;
+  color: #ff0000;
   border: none;
   padding: 10px 15px;
   font-size: 14px;
