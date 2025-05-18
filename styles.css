@@ -223,7 +223,7 @@ footer {
 }
 
 .product-info button:hover {
-  background-color: #b4b4b4;
+  background-color: #000000;
 }
 
 
@@ -236,7 +236,7 @@ footer {
 
 .product-grid .product-card {
   width: 200px; /* задай нужную ширину карточки */
-  border: 1px solid #ccc;
+  border: 1px solid #d0d0d0;
   padding: 10px;
   box-sizing: border-box;
 }
