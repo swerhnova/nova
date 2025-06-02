@@ -243,6 +243,9 @@ footer {
 
 
 
+
+
+
 .marquee-left,
 .marquee-right {
   position: fixed;
@@ -257,7 +260,7 @@ footer {
   white-space: nowrap;
   animation: scroll-vertical 10s linear infinite;
   z-index: 999;
-  color: #fff;
+  color: #a20101;
   background: black;
   opacity: 0.7;
 }
