@@ -27,27 +27,5 @@ function toggleCart() {
   document.getElementById("cart-modal").classList.toggle("hidden");
 }
 
-function clearCart() {
-  cart = [];
-  updateCartUI();
-}
-const modal = document.getElementById('modal');
-const modalTitle = document.getElementById('modal-title');
-const modalImg = document.getElementById('modal-img');
-const modalDesc = document.getElementById('modal-desc');
-const modalPrice = document.getElementById('modal-price');
 
-function openModal(title, imgSrc, desc, price) {
-  modalTitle.textContent = title;
-  modalImg.src = imgSrc;
-  modalDesc.textContent = desc;
-  modalPrice.textContent = price;
-  modal.style.display = 'block';
-}
 
-function closeModal() {
-  modal.style.display = 'none';
-}
-
-// Пример, как повесить на товар (в HTML):
-// <div class="product-card" onclick="openModal('Товар 1', 'images/product1.jpg', 'Описание товара 1', 'Цена: €50')">
