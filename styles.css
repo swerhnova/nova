@@ -282,3 +282,7 @@ footer {
     transform: translateY(-100%);
   }
 }
+.marquee-content {
+  display: inline-block;
+  animation: scroll-vertical 10s linear infinite;
+}
