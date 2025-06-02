@@ -243,40 +243,39 @@ footer {
 
 
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  padding: 10px;
+.marquee-left,
+.marquee-right {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  overflow: hidden;
+  font-family: monospace;
+  font-size: 14px;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  white-space: nowrap;
+  animation: scroll-vertical 10s linear infinite;
+  z-index: 999;
+  color: #fff;
+  background: black;
+  opacity: 0.7;
 }
 
+.marquee-left {
+  left: 0;
+}
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 24px;
-    text-align: center;
+.marquee-right {
+  right: 0;
+  writing-mode: vertical-lr;
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(100%);
   }
-
-  .navbar ul {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    padding: 0;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
-    padding: 10px;
-  }
-
-  .product-card {
-    width: 100% !important;
-  }
-
-  .cart-icon {
-    position: static;
-    margin: 10px auto;
-    display: block;
-    text-align: center;
+  100% {
+    transform: translateY(-100%);
   }
 }
