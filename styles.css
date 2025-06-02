@@ -261,7 +261,7 @@ footer {
   animation: scroll-vertical 10s linear infinite;
   z-index: 999;
   color: #a20101;
-  background: black;
+  background: rgba(0, 0, 0, 0);
   opacity: 0.7;
 }
 
