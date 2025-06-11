@@ -1,0 +1,110 @@
+<<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Колесо удачи</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 30px; }
+    #wheel {
+      margin: 20px auto;
+      width: 300px;
+      height: 300px;
+      border: 10px solid #444;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+      transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+    }
+    #spinButton {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    #pointer {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      margin-left: -10px;
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 20px solid red;
+      z-index: 10;
+    }
+    #result {
+      font-size: 24px;
+      margin-top: 30px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Колесо удачи</h1>
+  <div id="wheel">
+    <div id="pointer"></div>
+  </div>
+  <button id="spinButton">Крутить</button>
+  <div id="result"></div>
+
+  <script>
+    const prizes = ['Скидка 10%', 'Бесплатная доставка', 'Подарок', 'Главный приз'];
+    const wheel = document.getElementById('wheel');
+    const result = document.getElementById('result');
+    const spinButton = document.getElementById('spinButton');
+
+    // Разделяем круг на секторы по количеству призов
+    const sectors = prizes.length;
+    const sectorAngle = 360 / sectors;
+    let currentRotation = 0;
+
+    // Рисуем секторы колеса (простыми цветами)
+    function drawWheel() {
+      const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99'];
+      let sectorsHTML = '';
+      for(let i = 0; i < sectors; i++) {
+        sectorsHTML += `<div style="
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          background-color: ${colors[i % colors.length]};
+          transform-origin: 100% 100%;
+          transform: rotate(${sectorAngle * i}deg) skewY(${90 - sectorAngle}deg);
+          top: 50%;
+          left: 50%;
+          ">
+          </div>`;
+      }
+      wheel.innerHTML += sectorsHTML;
+    }
+
+    drawWheel();
+
+    spinButton.onclick = () => {
+      spinButton.disabled = true;
+      result.textContent = '';
+
+      // Случайный сектор
+      const randomSector = Math.floor(Math.random() * sectors);
+
+      // Рассчитаем вращение: полный оборот + поворот к нужному сектору
+      const extraSpins = 5; // сколько полных оборотов
+      const finalRotation = extraSpins * 360 + (randomSector * sectorAngle) + sectorAngle / 2;
+
+      currentRotation = (currentRotation + finalRotation) % 360;
+
+      wheel.style.transition = 'transform 4s cubic-bezier(0.33, 1, 0.68, 1)';
+      wheel.style.transform = `rotate(${currentRotation}deg)`;
+
+      // После анимации показываем результат
+      setTimeout(() => {
+        result.textContent = `Ты выиграл: ${prizes[randomSector]}!`;
+        spinButton.disabled = false;
+      }, 4000);
+    };
+  </script>
+
+</body>
+</html>
