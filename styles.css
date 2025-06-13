@@ -286,3 +286,8 @@ footer {
   display: inline-block;
   animation: scroll-vertical 10s linear infinite;
 }
+.points-display {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+}
