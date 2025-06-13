@@ -12,11 +12,28 @@ body {
 
 header {
   padding: 1rem 2rem;
-  background: #000000;
   font-size: 120%;
-  border-bottom: 1px solid #ffffff;
   text-align: left;
+  border-bottom: 1px solid #ffffff;
+
+  background: linear-gradient(-45deg, #000000, #111111, #1a1a1a, #000000);
+  background-size: 400% 400%;
+  animation: headerGradient 10s ease infinite;
+  color: white;
 }
+
+@keyframes headerGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
 main {
   padding: 2rem;
