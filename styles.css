@@ -317,3 +317,35 @@ nav {
   height: 100%;
   z-index: -1;
 }
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    font-size: 100%;
+    text-align: center;
+  }
+
+  .tile {
+    width: 100% !important;
+    margin: 0.5rem 0;
+  }
+
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+}
+.tile {
+  width: calc(33.333% - 1rem);
+  margin: 0.5rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .tile {
+    width: 100%;
+  }
+}
